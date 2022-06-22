@@ -80,7 +80,7 @@ export const logIn = async (root: any, {
   const user = userHelper.findUserByEmail(email)
   if (!user) throw new Error('Email Account Not Exists');
 
-  const passwordIsValid = checkHash(password, user.password as string)
+  const passwordIsValid = await checkHash(password, user.password as string)
   if (!passwordIsValid) throw new Error('Wrong Password');
 
   const token = await createToken({
