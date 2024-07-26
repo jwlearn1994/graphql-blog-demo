@@ -1,4 +1,4 @@
-import { ForbiddenError } from 'apollo-server'
+import { ForbiddenError } from '@/error'
 
 export const posts = [
   {

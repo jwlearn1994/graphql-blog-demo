@@ -1,6 +1,6 @@
-import { ForbiddenError } from 'apollo-server'
 import bcrypt from 'bcrypt'
 import jwt from 'jsonwebtoken'
+import { ForbiddenError } from '@/error'
 
 const hash = (v: string, saltRounds: string) => bcrypt.hash(v, saltRounds)
 
